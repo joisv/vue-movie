@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from "@vue/reactivity"
 import MainSeries from './partials/MainSeries.vue'
 import NavgationSeries from './partials/NavigationSeries.vue'
 import TvShow from './partials/TvShow.vue'

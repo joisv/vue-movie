@@ -6,7 +6,7 @@ import Popular from '../components/Popular.vue'
 <template>
   <main>
     <Slider/>
-    <Main/>
+      <Main />
     <Popular/>
   </main>
 </template>
