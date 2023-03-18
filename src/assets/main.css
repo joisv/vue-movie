@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .bg-slider{
+        opacity: 0.9;
+        box-shadow: inset 73px -38px 107px 3px rgba(0, 0, 0, 0.8);
+    }
+    .bg-detail{
+        background: linear-gradient(180deg, rgba(11, 10, 10, 0.9) 55.89%, rgba(5, 83, 100, 0.91) 100%);
+        box-shadow: inset 0px 34px 35px 11px rgba(0, 0, 0, 0.25);
+    }
+    .ratings{
+        box-sizing: border-box;
+        width: fit-content;
+        height: fit-content;
+        padding: 3px;
+
+        border: 9px solid #01AED3;
+        border-radius: 50px;
+    }
+    .active{
+        background-color: #01AED3;
+    }
+    .activeMobileNav{
+        stroke: #01AED3;
+    }
+   
+}
