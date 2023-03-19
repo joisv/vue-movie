@@ -9,14 +9,13 @@ import  getMovies  from '../composable/fetch'
     watchEffect( async () => {
         const query = route.query.query;
         await searchMulti(query);
-        console.log(resultSearch);
     });
 </script>
 <template>
 <Suspense>
     <template #default>
         <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 p-2 max-w-screen-xl m-auto sm:relative sm:top-14">
-        <h1 class="font-semibold absolute text-primary text-xl ml-2 mt-2 mb-3 sm:text-3xl lg:text-4xl sm:font-bold sm:opacity-80 h-fit w-[80vw]" title="New Movie">Result for <span class="text-slate-300 text-lg font-normal sm:text-2xl sm:font-medium">{{ route.query.query }}</span></h1>
+        <h1 class="font-semibold absolute text-primary text-xl ml-2 mt-5 mb-3 sm:text-3xl lg:text-4xl sm:font-bold sm:opacity-80 h-fit w-[80vw]" title="New Movie">Result for <span class="text-slate-300 text-lg font-normal sm:text-2xl sm:font-medium">{{ route.query.query }}</span></h1>
         <template v-for="search in resultSearch.results" :key="search.id">
             <div class="min-h-[160px] w-full cursor-pointer relative top-20">
                 <RouterLink :to="{name : 'detail' , params: { id: search.id } }" v-if="search.media_type === 'movie'">

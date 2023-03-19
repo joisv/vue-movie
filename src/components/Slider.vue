@@ -7,7 +7,6 @@ import getMovies from '../composable/fetch'
     const { playerPath, latestMovies, getLatestMovie } = getMovies()
     onMounted( async () => {
     await  getLatestMovie()
-    console.log(latestMovies.value);
     var swiper = new Swiper('.swiper', {
         spaceBetween: 30,
         effect: 'fade',
